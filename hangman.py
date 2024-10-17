@@ -245,5 +245,22 @@ class Hangman:
             print(" ")
             self.restart_game()
 
+    def restart_game(self) -> None:
+        """
+        Restart the game after GAME OVER.
+        """
+        print("I feel generous today. Want to restart?")
+        print("(1) Mhmm.")
+        print("(2) Nope. Death is for me.")
+        user_choice = input("-> ")
+
+        if user_choice == "1":
+            self.repeat_intro()
+        elif user_choice == "2":
+            exit()
+        else:
+            print("What was that? You have to pick either 1 or 2.")
+            self.restart_game()
+
 
 game = Hangman()
